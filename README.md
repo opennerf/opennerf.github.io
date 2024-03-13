@@ -3,6 +3,16 @@
 
 ### Setup
 
+#### Install NerfStudio
+
+After [https://docs.anaconda.com/free/miniconda/#quick-command-line-install](installing conda), setup the conda environment:
+```
+conda create --name nerfstudio3 -y python=3.8
+conda activate nerfstudio3
+```
+
+
+
 ## BibTeX :pray:
 ```
 @inproceedings{engelmann2024opennerf,
