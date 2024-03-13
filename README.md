@@ -5,20 +5,33 @@
 
 #### Install NerfStudio
 
-After [installing conda]() , setup the conda environment:
-
-[install conda](https://www.google.com](https://docs.anaconda.com/free/miniconda/#quick-command-line-install)
+After installing conda (see https://www.google.com](https://docs.anaconda.com/free/miniconda/#quick-command-line-install) , setup the conda environment:
 
 ```
 conda create --name nerfstudio -y python=3.8
 conda activate nerfstudio
 python -m pip install --upgrade pip
 ```
-Install cuda and torch
+Install cuda and torch etc
 ```
 conda install nvidia/label/cuda-12.1.1::cuda
 pip3 install torch torchvision torchaudio
+pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 ```
+
+Install LERF (not needed for this project)
+```
+git clone https://github.com/kerrj/lerf
+cd lerf
+python -m pip install -e .
+ns-install-cli
+```
+
+Install OpenNeRF
+```
+```
+
+
 ## BibTeX :pray:
 ```
 @inproceedings{engelmann2024opennerf,
