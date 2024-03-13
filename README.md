@@ -8,12 +8,15 @@
 After [installing conda](https://www.google.com](https://docs.anaconda.com/free/miniconda/#quick-command-line-install), setup the conda environment:
 
 ```
-conda create --name nerfstudio3 -y python=3.8
-conda activate nerfstudio3
+conda create --name nerfstudio -y python=3.8
+conda activate nerfstudio
+python -m pip install --upgrade pip
 ```
-
-
-
+Install cuda and torch
+```
+conda install nvidia/label/cuda-12.1.1::cuda
+pip3 install torch torchvision torchaudio
+```
 ## BibTeX :pray:
 ```
 @inproceedings{engelmann2024opennerf,
