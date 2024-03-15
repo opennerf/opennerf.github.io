@@ -19,12 +19,6 @@ conda install nvidia/label/cuda-12.1.1::cuda
 conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=12.1 -c pytorch -c nvidia
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 ```
-
-<!-- conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
-pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
-pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch -->
-
-
 Install OpenNeRF
 ```
 git clone https://github.com/opennerf/opennerf
@@ -33,7 +27,27 @@ python -m pip install -e .
 ns-install-cli
 ```
 
-Running OpenNeRF (see launch.json)
+## File Structure
+
+```
+├── opennerf
+│   ├── __init__.py
+│   ├── my_config.py
+│   ├── custom_pipeline.py [optional]
+│   ├── custom_model.py [optional]
+│   ├── custom_field.py [optional]
+│   ├── custom_datamanger.py [optional]
+│   ├── custom_dataparser.py [optional]
+│   ├── ...
+├── pyproject.toml
+```
+
+## Running OpenNeRF
+This repository creates a new Nerfstudio method named "opennerf". To train with it, run the command:
+```
+ns-train opennerf --data [PATH]
+```
+See `.vscode/launch.json` for specific examples.
 
 
 ## BibTeX :pray:
@@ -47,21 +61,6 @@ Running OpenNeRF (see launch.json)
 ```
 
 
-## File Structure
-We recommend the following file structure:
-
-```
-├── my_method
-│   ├── __init__.py
-│   ├── my_config.py
-│   ├── custom_pipeline.py [optional]
-│   ├── custom_model.py [optional]
-│   ├── custom_field.py [optional]
-│   ├── custom_datamanger.py [optional]
-│   ├── custom_dataparser.py [optional]
-│   ├── ...
-├── pyproject.toml
-```
 
 ## Registering with Nerfstudio
 Ensure that nerfstudio has been installed according to the [instructions](https://docs.nerf.studio/en/latest/quickstart/installation.html). Clone or fork this repository and run the commands:
@@ -73,8 +72,3 @@ pip install -e .
 ns-install-cli
 ```
 
-## Running the new method
-This repository creates a new Nerfstudio method named "method-template". To train with it, run the command:
-```
-ns-train method-template --data [PATH]
-```
