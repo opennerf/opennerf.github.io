@@ -1,6 +1,6 @@
 # OpenNeRF: OpenSet 3D Neural Scene Segmentation with Pixel-Wise Features and Rendered Novel Views
 
-![OpenNeRF Teaser](docs/static/images/teaser.jpeg)
+![OpenNeRF Teaser](docs/static/images/teaser.png)
 
 ### Setup
 
