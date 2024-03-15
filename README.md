@@ -35,23 +35,6 @@ ns-install-cli
 
 Running OpenNeRF (see launch.json)
 
----
-
-Install LERF (not needed for this project)
-```
-git clone https://github.com/kerrj/lerf
-cd lerf
-python -m pip install -e .
-ns-install-cli
-```
-
-Install OpenNeRF
-```
-pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
-```
-
-
-
 
 ## BibTeX :pray:
 ```
