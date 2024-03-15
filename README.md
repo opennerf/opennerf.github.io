@@ -31,7 +31,7 @@ ns-install-cli
 
 ```
 ├── opennerf
-|   ├── 
+│   ├── 
 │   ├── __init__.py
 │   ├── data
 │   │   ├── utils
