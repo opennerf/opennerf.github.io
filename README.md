@@ -1,5 +1,6 @@
 # OpenNeRF
 
+![OpenNeRF Teaser](docs/static/images/fig1.jpeg)
 
 ### Setup
 
