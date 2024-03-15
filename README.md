@@ -5,9 +5,7 @@
 
 #### Install NerfStudio
 
-After installing conda (see
-[here](https://www.google.com](https://docs.anaconda.com/free/miniconda/#quick-command-line-install
-), setup the conda environment:
+After installing conda (see https://www.google.com](https://docs.anaconda.com/free/miniconda/#quick-command-line-install), setup the conda environment:
 
 ```
 conda create --name opennerf -y python=3.8
